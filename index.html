@@ -20,7 +20,7 @@
                     <div class="tache"><a>Taches : </a>
                     <div id="count"> {{tasks.length}} </div></div>
 
-                    <div class="remove-tache"> <a>Effacer tout</a></div>
+                    <button class="remove-tache" @click="remove()">Tout Effacer</button>
                 </div>
             </div>
             <div class="middle">
@@ -38,20 +38,12 @@
             class="edit"
             type="text"
             v-model="title"
-            v-todo-focus="todo == editedTodo"
-            placeholder="Donne moi une tache !"
-            @blur="doneEdit(todo)"
-            @keyup.enter="doneEdit(todo)"
-            @keyup.esc="cancelEdit(todo)"/>
+            placeholder="Donne moi une tache !"/>
             <input
             class="edit"
             type="text"
             v-model="desc"
-            v-todo-focus="todo == editedTodo"
-            placeholder="Description :"
-            @blur="doneEdit(todo)"
-            @keyup.enter="doneEdit(todo)"
-            @keyup.esc="cancelEdit(todo)"/>
+            placeholder="Description :"/>
             </div>
         </div>
         <input class="send" type="submit" @click.prevent="addElement()">

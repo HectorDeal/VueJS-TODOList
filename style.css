@@ -73,6 +73,9 @@ h1 {
     margin-right: 5%;
     width: 180px;
 }
+.tache a {
+    margin-right: 3%;
+}
 .remove-tache {
     display: flex;
     justify-content: center;
@@ -80,6 +83,7 @@ h1 {
     padding: 2%;
     background: red;
     width: 130px;
+    border: white;
 }
 .edit {
 	position: relative;

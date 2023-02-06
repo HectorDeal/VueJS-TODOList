@@ -15,6 +15,10 @@ new Vue({
             },
             ...this.tasks]
             this.tasks = array
-        }
+        },
+        remove : function(){
+            console.log("test");
+            this.array.remove
+        },
     }
 })
