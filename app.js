@@ -3,7 +3,6 @@ new Vue({
     data : {
         title : "",
         desc : "",
-        statut : false,
         tasks : [],
     },
 
@@ -11,14 +10,17 @@ new Vue({
         addElement : function(){
             let array = [{
                 title : this.title,
-                desc : this.desc
+                desc : this.desc,
+                statut: false
             },
             ...this.tasks]
             this.tasks = array
         },
         remove : function(){
-            console.log("test");
-            this.array.remove
+            this.tasks = [];
+        },
+        removeTask(index) {
+            this.tasks.splice(index, 1);
         },
     }
 })

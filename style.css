@@ -84,6 +84,7 @@ h1 {
     background: red;
     width: 130px;
     border: white;
+    color: white;
 }
 .edit {
 	position: relative;
@@ -127,8 +128,22 @@ ul{
 }
 li{
     display: flex;
+    align-items: center;
     flex-direction: row;
 }
 ul input{
     margin-right: 10px;
+}
+input[type="checkbox"]:checked + h2 {
+    text-decoration: line-through;
+    color: red;
+}
+.corbeille{
+    margin-left: 5%;
+    height: 20px;
+    width: 20px;
+    filter: saturate(0);
+}
+.corbeille:hover{
+    filter: saturate(100);
 }

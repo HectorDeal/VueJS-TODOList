@@ -28,6 +28,7 @@
                     <ul>
                         <li><input type="checkbox">
                         <h2>{{task.title}}</h2>
+                        <img src="./corbeille.png" alt="corbeille" class="corbeille"  @click="removeTask(index)">
                     </li>
                     {{task.desc}}
                     </ul>
